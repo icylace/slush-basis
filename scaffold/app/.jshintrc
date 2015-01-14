@@ -1,0 +1,135 @@
+{
+  // ---------------------------------------------------------------------------
+  //  Enforcing Options
+  //  http://www.jshint.com/docs/options/#enforcing-options
+  // ---------------------------------------------------------------------------
+
+  "bitwise":       true,
+  "camelcase":     false,
+  "curly":         true,
+  "eqeqeq":        true,
+  "es3":           true,
+  "forin":         true,
+  "freeze":        true,
+  "immed":         true,
+  "indent":        2,
+  "latedef":       true,
+  "maxcomplexity": 20,
+  "maxdepth":      5,
+  "maxlen":        80,
+  "maxparams":     10,
+  "maxstatements": 50,
+  "newcap":        true,
+  "noarg":         true,
+  "nonbsp":        true,
+  "noempty":       true,
+  "nonew":         true,
+  "plusplus":      false,
+  "quotmark":      "single",
+  "strict":        true,
+  "trailing":      true,
+  "undef":         true,
+  "unused":        true,
+
+
+  // ---------------------------------------------------------------------------
+  //  Relaxing Options
+  //  http://www.jshint.com/docs/options/#relaxing-options
+  // ---------------------------------------------------------------------------
+
+  "asi":          false,
+  "boss":         false,
+  "debug":        false,
+  "eqnull":       false,
+  "esnext":       false,
+  "evil":         false,
+  "expr":         false,
+  "funcscope":    false,
+  "gcl":          false,
+  "globalstrict": false,
+  "iterator":     false,
+  "lastsemic":    false,
+  "laxbreak":     false,
+  "laxcomma":     false,
+  "loopfunc":     false,
+  "maxerr":       100,
+  "moz":          false,
+  "multistr":     false,
+  "notypeof":     false,
+  "proto":        false,
+  "scripturl":    false,
+  "smarttabs":    false,
+  "shadow":       false,
+  "sub":          false,
+  "supernew":     false,
+  "validthis":    false,
+
+
+  // ---------------------------------------------------------------------------
+  //  Environments
+  //  http://www.jshint.com/docs/options/#environments
+  // ---------------------------------------------------------------------------
+
+  "browser":     true,
+  "couch":       false,
+  "devel":       true,
+  "dojo":        false,
+  "jquery":      false,
+  "mootools":    false,
+  "node":        false,
+  "nonstandard": false,
+  "phantom":     false,
+  "prototypejs": false,
+  "rhino":       false,
+  "worker":      false,
+  "wsh":         false,
+  "yui":         false,
+
+
+  // ---------------------------------------------------------------------------
+  //  Legacy Options
+  //  http://www.jshint.com/docs/options/#legacy
+  // ---------------------------------------------------------------------------
+
+  "nomen":    false,
+  "onevar":   false,
+  "passfail": false,
+  "white":    false,
+
+
+  // ---------------------------------------------------------------------------
+  //  Undocumented Options
+  // ---------------------------------------------------------------------------
+
+  "es5": false,       // true: Allow ES5 syntax (ex: getters and setters)
+  "globals": {        // Additional predefined global variables.
+    "_":                  true,
+    "$modal":             true,
+    "angular":            true,
+    "console":            true,
+    "moment":             true,
+    "numeral":            true,
+    "parseNaturalNumber": true,
+    "uuid":               true
+  },
+
+
+  // ---------------------------------------------------------------------------
+  //  Useful overrides when working with LiveScript.
+  // ---------------------------------------------------------------------------
+
+  "bitwise":  false,
+  "boss":     true,
+  "curly":    false,
+  "strict":   false,
+  "supernew": true,
+  "eqeqeq":   false,
+  "eqnull":   true,
+  "expr":     true,
+  "forin":    false,
+  "latedef":  "nofunc",
+  "laxbreak": true,
+  "maxlen":   0,
+  "plusplus": false,
+  "quotmark": false
+}

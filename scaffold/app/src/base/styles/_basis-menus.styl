@@ -1,0 +1,47 @@
+$basis-menu
+  margin  0
+  padding 0
+  li
+    list-style none none
+    margin     0
+    padding    0
+  a
+    &, &:link, &:visited, &:hover, &:active, &:focus
+      display         block
+      text-decoration none
+  .basis-menu-parent:hover
+    .basis-menu__submenu
+      visibility visible
+  .basis-menu__submenu
+    padding    0
+    visibility hidden
+    z-index    1
+    li
+      display block
+
+$basis-menu--horizontal-floated
+  @extends $basis-menu
+  li
+    float    left
+    position relative
+  .basis-menu__submenu
+    position absolute
+
+$basis-menu--horizontal-justified
+  @extends   $basis-menu
+  position   relative
+  text-align justify
+  li
+    display    inline-block
+    text-align left
+  .basis-menu__submenu
+    position absolute
+  &:after
+    content ''
+    display inline-block
+    width   100%
+
+// -----------------------------------------------------------------------------
+
+// http://jsfiddle.net/csswizardry/zfSt4/
+// table-layout

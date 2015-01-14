@@ -1,0 +1,63 @@
+{
+
+  "compressing": false,
+  "linting":     false,
+  "minifying":   false,
+  "notifying":   false,
+  "syncing":     false,
+
+  // URL used for browser syncing.
+  "project_url": "",
+
+  // Where output files will generally be placed.
+  "default_dest": "build",
+
+  // Paths to delete when the 'clean' task is run.
+  "cleanable_paths": ["build", "build/*", "tmp"],
+
+  // The temporary folder.  Ideally not the same as the output folder or a subfolder of it.
+  "tmp": "tmp",
+
+  //
+  // 'Watch' paths will override source paths when the 'watch' task is used.
+  //
+
+  "fonts": {
+    "src":  "assets/fonts/*",
+    "dest": "build/fonts"
+  },
+
+  "images": {
+    "src":  "assets/images/*",
+    "dest": "build/images"
+  },
+
+  "scripts": {
+    "src": [
+      "src/site/scripts/**/*.ls"
+    ]
+  },
+
+  "styles": {
+    "src": "src/site/styles/main.styl",
+    "watch": [
+      "src/site/components/**/*.styl",
+      "src/site/styles/*.styl"
+    ]
+  },
+
+  "vendor-styles": {
+    "src": [
+      "bower_components/**/*.css"
+    ]
+  },
+
+  "templates": {
+    "src": [
+      "src/site/components/general/**/*.jade",
+      "src/site/components/admin/**/*.jade"
+    ],
+    "dest": "build/templates"
+  }
+
+}

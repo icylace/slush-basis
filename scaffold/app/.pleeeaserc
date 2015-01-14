@@ -1,0 +1,14 @@
+{
+  "in":             ["main.css", "extra.css"],
+  "out":            "main.min.css",
+  "import":         true,
+  "autoprefixer":   {"browsers": ["last 2 versions"]},
+  "mqpacker":       false,
+  "minifier":       true,
+  "rem":            ["16px", { "replace": false }],
+  "pseudoElements": true,
+  "opacity":        false,
+  "filters":        false,
+  "sourcemaps":     false,
+  "next":           false
+}

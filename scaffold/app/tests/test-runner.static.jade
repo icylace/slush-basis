@@ -1,0 +1,28 @@
+doctype html
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+html.no-js(lang="en")<!--<![endif]-->
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="width=device-width")
+    title Mocha Tests
+    <!--[if IE]>
+    script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+    <![endif]-->
+    link(rel="stylesheet", href="/usr/local/lib/node_modules/mocha/mocha.css")
+  body
+    #mocha
+    script(src="/usr/local/lib/node_modules/mocha/mocha.js")
+    script(src="/usr/local/lib/node_modules/chai/chai.js")
+    script.
+      mocha.ui('bdd')
+      mocha.reporter('html')
+      expect = chai.expect
+    script(src="test.js")
+    script.
+      if (window.mochaPhantomJS) {
+        mochaPhantomJS.run()
+      } else {
+        mocha.run()
+      }

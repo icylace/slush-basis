@@ -1,0 +1,48 @@
+@require '**/*'
+
+// -----------------------------------------------------------------------------
+
+gradient(start_color, finish_color)
+  background-color finish_color
+  background-image linear-gradient(top, start_color, finish_color)
+  filter           unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='#{start_color}', endColorstr='#{finish_color}')")
+  -ms-filter       "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{start_color}', endColorstr='#{finish_color}')"
+
+
+// -----------------------------------------------------------------------------
+//  Vertical Centering
+//  http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+// -----------------------------------------------------------------------------
+
+$vertical-center
+  position  relative
+  top       50%
+  transform translateY(-50%)
+
+
+// -----------------------------------------------------------------------------
+//  Cross-browser float clearing.
+//  http://nicolasgallagher.com/micro-clearfix-hack/
+//  http://perishablepress.com/press/2009/12/06/new-clearfix-hack/
+// -----------------------------------------------------------------------------
+
+$group
+  clearfix()
+
+
+// -----------------------------------------------------------------------------
+
+// // http://kimili.com/journal/rgba-hsla-css-generator-for-internet-explorer/
+// // http://www.beijingyoung.com/articles/rgba-argb-converter/
+// // http://kilianvalkhof.com/2010/css-xhtml/how-to-use-rgba-in-ie/
+// mixin background-color-transparency (red, green, blue, alpha = 1)
+//   alpha_hex = `Math.floor(alpha * 255).toString(16)`
+//   red_hex   = `Math.floor(red).toString(16)`
+//   green_hex = `Math.floor(green).toString(16)`
+//   blue_hex  = `Math.floor(blue).toString(16)`
+//   argb      = "##{alpha_hex}#{red_hex}#{green_hex}#{blue_hex}"
+//   background none
+//   background rgba(red, green, blue, alpha)
+//   -ms-filter "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{argb},endColorstr=#{argb})"        // IE 8
+//       filter unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr=#{argb},endColorstr=#{argb})")       // IE 6-7
+//   zoom       1

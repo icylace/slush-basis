@@ -1,0 +1,52 @@
+//
+// Styles are written in a generally verbose fashion for ease of readability
+// and maintainability.  Preprocessing is relied upon to take care of producing
+// production-ready CSS.
+//
+// Rules are ordered according to criteria of subsequently increasing priority:
+//
+//   1.  Collect into distinct ordered groups:
+//       1.  Elements
+//       2.  Pseudo-Selectors
+//       3.  Classes
+//       4.  IDs
+//       5.  Hacks
+//       6.  Development-Oriented (e.g. diagnostic styles)
+//
+//   2.  Within each group order rules according to priority:
+//       1.  Nesting order if there is one (e.g. '.main-wrapper' before '.main').
+//       2.  Rules with multiple selectors are grouped together by similar
+//           starting selectors.
+//       3.  Increasing cascade level.
+//       4.  Increasing specificity.
+//       5.  Sibling order if there is one (e.g. '.main-header' before '.main-footer').
+//       6.  HTML document order.
+//       7.  Finally, alphabetical order.
+//
+// Selectors and properties are arranged alphabetically by default.
+//
+// Shorthand notations are used when they enhance readability.
+//
+// Hex notation is used for opaque color values.
+//
+// Percentages are used when defining font sizes.
+// http://www.kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/
+//
+// Stylus is the preferred preprocessing language.
+//
+// In HTML elements, attributes related to CSS are ideally arranged in order of
+// increasing CSS specificity (i.e. first "class" then "id" then "style").
+//
+
+
+@require '../../base/styles/_basis'
+@require '_setup'
+@require '*'
+// @require '../components/**/*'
+
+
+// -----------------------------------------------------------------------------
+//  Shame Styles
+//  http://csswizardry.com/2013/04/shame-css/
+// -----------------------------------------------------------------------------
+
