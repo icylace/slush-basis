@@ -1,6 +1,6 @@
-var browserSync = require('browser-sync')
-var gulp        = require('gulp')
-var settings    = require('../gulp.json')
+var browserSync = require('browser-sync');
+var gulp        = require('gulp');
+var settings    = require('../gulp.json');
 
 gulp.task(
   'init-sync',
@@ -12,7 +12,7 @@ gulp.task(
       minify:  false,
       proxy:   settings.project_url
       // host:    '10.0.0.1'
-    })
+    });
   },
   { aliases: ['s'] }
-)
+);

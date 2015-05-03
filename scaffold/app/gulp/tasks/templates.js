@@ -1,8 +1,8 @@
-var g        = require('gulp-load-plugins')()
-var gulp     = require('gulp')
-var lazy     = require('lazypipe')
-var base     = require('../helpers/base.js')
-var settings = require('../gulp.json')
+var g        = require('gulp-load-plugins')();
+var gulp     = require('gulp');
+var lazy     = require('lazypipe');
+var base     = require('../helpers/base.js');
+var settings = require('../gulp.json');
 
 var minify_html = lazy()
   .pipe(g.htmlmin, {
@@ -16,12 +16,12 @@ var minify_html = lazy()
     removeRedundantAttributes:    true,
     removeOptionalTags:           true,
     useShortDoctype:              true
-  })
+  });
 
 // `gulp-w3cjs` needs to be executed last in a pipeline which is why
 // we're using `lazypipe` to get it to work during a series of pipes.
 var lint_html = lazy()
-  .pipe(g.w3cjs)
+  .pipe(g.w3cjs);
 
 gulp.task(
   'templates',
@@ -34,7 +34,7 @@ gulp.task(
       .pipe(g.if(settings.minifying, minify_html()))
       .pipe(g.flatten())
       // .pipe(g.angularTemplatecache({ module: 'appModule' }))
-      .pipe(base.placeFiles(settings.templates.dest, 'Templates compiled.'))
+      .pipe(base.placeFiles(settings.templates.dest, 'Templates compiled.'));
   },
   { aliases: ['t'] }
-)
+);

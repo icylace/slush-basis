@@ -1,10 +1,10 @@
-var browserSync = require('browser-sync')
-var g           = require('gulp-load-plugins')()
-var gulp        = require('gulp')
-var settings    = require('../gulp.json')
+var browserSync = require('browser-sync');
+var g           = require('gulp-load-plugins')();
+var gulp        = require('gulp');
+var settings    = require('../gulp.json');
 
 var placeFiles = function (dest, message) {
-  message = message || 'Done'
+  message = message || 'Done';
   // TODO:
   // - use multipipe or something else
   return g.util.pipeline([
@@ -13,7 +13,7 @@ var placeFiles = function (dest, message) {
     gulp.dest(dest || settings.default_dest),
     g.if(settings.notifying, g.notify(message)),
     g.if(settings.syncing, browserSync.reload({ stream: true }))
-  ])
+  ]);
 }
 
 module.exports = {
@@ -25,4 +25,4 @@ module.exports = {
     syncing:     settings.syncing
   },
   placeFiles:  placeFiles
-}
+};

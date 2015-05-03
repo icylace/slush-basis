@@ -1,9 +1,9 @@
-var g        = require('gulp-load-plugins')()
-var gulp     = require('gulp')
-var lazy     = require('lazypipe')
-var base     = require('../helpers/base.js')
-var helper   = require('../helpers/scripts-helper.js')
-var settings = require('../gulp.json')
+var g        = require('gulp-load-plugins')();
+var gulp     = require('gulp');
+var lazy     = require('lazypipe');
+var base     = require('../helpers/base.js');
+var helper   = require('../helpers/scripts-helper.js');
+var settings = require('../gulp.json');
 
 gulp.task(
   'scripts',
@@ -28,7 +28,7 @@ gulp.task(
       // common to // both custom code and vendor code.
       .pipe(g.if(settings.minifying, g.stripDebug())),
       .pipe(g.if(settings.minifying, helper.minify())),
-      .pipe(base.placeFiles(settings.scripts.dest, 'Scripts compiled.'))
+      .pipe(base.placeFiles(settings.scripts.dest, 'Scripts compiled.'));
   },
   { aliases: ['js'] }
-)
+);
