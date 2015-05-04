@@ -8,21 +8,21 @@ gulp.task(
   function () {
     g.watch(
       settings.scripts.watch || settings.scripts.src,
-      { emitOnGlob: false },
+      { ignoreInitial: false },
       function () {
         gulp.start('scripts');
       }
     );
     g.watch(
       settings.styles.watch || settings.styles.src,
-      { emitOnGlob: false },
+      { ignoreInitial: false },
       function () {
         gulp.start('styles');
       }
     );
     g.watch(
       settings.templates.watch || settings.templates.src,
-      { emitOnGlob: false },
+      { ignoreInitial: false },
       function () {
         gulp.start('templates');
       }

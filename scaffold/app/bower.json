@@ -7,24 +7,14 @@
   "authors": [
     "your name <you@email>"
   ],
-  "dependencies": {
+  "//": "Put the following into 'devDependencies' if they are useful for your particular project.",
+  "_dependencies": {
     "jquery": "2.1.x",
     "lodash": "2.4.x",
     "typify": "0.2.x"
   },
-  "overrides": {
-    "angular-classy":     { "main": "angular-classy.js" },
-    "gibberish-aes":      { "main": "dist/gibberish-aes-1.0.0.js" },
-    "json3":              { "main": "lib/json3.js" },
-    "lodash":             { "main": "dist/lodash.js" },
-    "mithril":            { "main": "mithril.js" },
-    "mithril-bootstrap":  { "main": "dist/mithril-bootstrap.js" },
-    "mithril-components": { "main": "components/tabs/tabs.js" },
-    "ng-grid":            { "main": "build/ng-grid.js" },
-    "node-uuid":          { "main": "uuid.js" }
-  },
-  "_comment": "Put the following into 'devDependencies' if they are useful for your particular project.",
-  "_plugins": {
+  "//": "Put the following into 'devDependencies' if they are useful for your particular project.",
+  "_devDependencies": {
     "angular":                     "1.2.x",
     "angular-animate":             "1.2.x",
     "angular-bootstrap":           "^0.11.x",
@@ -44,5 +34,16 @@
     "numeral":                     "^1.5.x",
     "restangular":                 "^1.3.1",
     "string":                      "1.9.x"
+  },
+  "overrides": {
+    "angular-classy":     { "main": "angular-classy.js" },
+    "gibberish-aes":      { "main": "dist/gibberish-aes-1.0.0.js" },
+    "json3":              { "main": "lib/json3.js" },
+    "lodash":             { "main": "dist/lodash.js" },
+    "mithril":            { "main": "mithril.js" },
+    "mithril-bootstrap":  { "main": "dist/mithril-bootstrap.js" },
+    "mithril-components": { "main": "components/tabs/tabs.js" },
+    "ng-grid":            { "main": "build/ng-grid.js" },
+    "node-uuid":          { "main": "uuid.js" }
   }
 }
