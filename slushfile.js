@@ -29,52 +29,52 @@
 
 'use strict'
 
-// var conflict = require('gulp-conflict')
-// var del      = require('del')
-var gulp     = require('gulp')
-var inquirer = require('inquirer')
-// var notify   = require('gulp-notify')
-var path     = require('path')
-var pipes    = require('pipe-joint')
-// var prompt   = require('gulp-prompt')
-// var rename   = require('gulp-rename')
-// var runs     = require('run-sequence')
-var S        = require('string')
-var spawn    = require('gulp-spawn')
-// var tb       = require('istextorbinary')
-// var template = require('gulp-template')
+// var conflict = require('gulp-conflict');
+// var del      = require('del');
+var gulp     = require('gulp');
+var inquirer = require('inquirer');
+// var notify   = require('gulp-notify');
+var path     = require('path');
+var pipes    = require('pipe-joint');
+// var prompt   = require('gulp-prompt');
+// var rename   = require('gulp-rename');
+// var runs     = require('run-sequence');
+var S        = require('string');
+var spawn    = require('gulp-spawn');
+// var tb       = require('istextorbinary');
+// var template = require('gulp-template');
 
 // var binaryFileExtensions = [
 //   '.3gp', '.bz2', '.gif', '.gz', '.jpg', '.mp3',
 //   '.mpg', '.png', '.so', '.tgz', '.wav', '.zip'
-// ]
+// ];
 
 // Converted from LiveScript source.
 function in$(x, xs) {
-  var i = -1, l = xs.length >>> 0
-  while (++i < l) if (x === xs[i]) return true
-  return false
+  var i = -1, l = xs.length >>> 0;
+  while (++i < l) if (x === xs[i]) return true;
+  return false;
 }
 
 var isTextFile = function (f) {
-  var extension = path.extname(f.name).toLowerCase()
-  return in$(extension, binaryFileExtensions)
-}
+  var extension = path.extname(f.name).toLowerCase();
+  return in$(extension, binaryFileExtensions);
+};
 
 var getAppName = function () {
   return 'foo';
   // var appname
   // try {
-  //   appname = require((path.join(process.cwd(), 'bower.json')).name)
+  //   appname = require((path.join(process.cwd(), 'bower.json')).name);
   // } catch (e) {
   //   try {
-  //     appname = require((path.join(process.cwd(), 'package.json')).name)
+  //     appname = require((path.join(process.cwd(), 'package.json')).name);
   //   } catch (e) {}
   // }
   // if (!appname) {
-  //   appname = gulp.args.join(' ') || path.basename(process.cwd())
+  //   appname = gulp.args.join(' ') || path.basename(process.cwd());
   // }
-  // return appname.replace(/[^\w\s]+?/g, ' ')
+  // return appname.replace(/[^\w\s]+?/g, ' ');
 }
 
 var paths = {
@@ -85,7 +85,7 @@ var paths = {
     '!' + __dirname + '/scaffold/node_modules/**'
   ],
   dest: './'
-}
+};
 
 var prompts = [
   {
@@ -111,25 +111,25 @@ var prompts = [
     message: 'Continue?',
     type:    'confirm'
   }
-]
+];
 
 gulp.task('default', function (done) {
-  console.log(g)
-  console.log(spawn)
+  console.log(g);
+  console.log(spawn);
   // inquirer.prompt(prompts, function (answers) {
   //   if (!answers.move_on) {
-  //     return done()
+  //     return done();
   //   }
 
   //   var hasFeature = function () {
-  //     return in$(it, answers.features)
-  //   }
+  //     return in$(it, answers.features);
+  //   };
 
-  //   var d = new Date()
-  //   answers.year         = d.getFullYear()
-  //   answers.created_date = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate()
-  //   answers.dashed_name  = S(answers.project_name).slugify().s
-  //   answers.module_name  = S(answers.name_dashed).camelize().s
+  //   var d = new Date();
+  //   answers.year         = d.getFullYear();
+  //   answers.created_date = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
+  //   answers.dashed_name  = S(answers.project_name).slugify().s;
+  //   answers.module_name  = S(answers.name_dashed).camelize().s;
 
   //   pipes([
   //     gulp.src(paths.src, { dot: true }),
@@ -141,9 +141,9 @@ gulp.task('default', function (done) {
   //     gulp.dest(paths.dest),
   //     g.spawn({ cmd: 'npm install' })
   //     g.spawn({ cmd: 'bower install' })
-  //   ])
-  //   // .on('end', done)
+  //   ]);
+  //   // .on('end', done);
 
   //   // process.on \end !-> done()
-  // })
-})
+  // });
+});
