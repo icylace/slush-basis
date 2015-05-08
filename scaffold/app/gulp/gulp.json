@@ -7,13 +7,13 @@
   "syncing":     false,
 
   // URL used for browser syncing.
-  "project_url": "",
+  "projectUrl": "",
 
   // Where output files will generally be placed.
-  "default_dest": "build",
+  "defaultDest": "build",
 
   // Paths to delete when the 'clean' task is run.
-  "cleanable_paths": ["build", "build/*", "tmp"],
+  "cleanablePaths": ["build", "build/*", "tmp"],
 
   // The temporary folder.  Ideally not the same as the output folder or a subfolder of it.
   "tmp": "tmp",
@@ -46,7 +46,7 @@
     ]
   },
 
-  "vendor-styles": {
+  "vendorStyles": {
     "src": [
       "bower_components/**/*.css"
     ]

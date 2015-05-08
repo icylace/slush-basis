@@ -8,7 +8,7 @@ gulp.task(
   'Copies the fonts over to where they\'ll be used.',
   function () {
     return gulp.src(settings.fonts.src)
-      .pipe(g.newer(settings.fonts.dest || settings.default_dest_path))
+      .pipe(g.newer(settings.fonts.dest || settings.defaultDestPath))
       .pipe(base.placeFiles(settings.fonts.dest, 'Fonts placed.'));
   },
   { aliases: ['f'] }

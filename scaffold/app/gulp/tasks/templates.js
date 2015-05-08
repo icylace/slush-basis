@@ -20,7 +20,7 @@ var minify_html = lazy()
 
 // `gulp-w3cjs` needs to be executed last in a pipeline which is why
 // we're using `lazypipe` to get it to work during a series of pipes.
-var lint_html = lazy()
+var lintHtml = lazy()
   .pipe(g.w3cjs);
 
 gulp.task(
@@ -30,8 +30,8 @@ gulp.task(
     gulp.src(settings.templates.src)
       .pipe(g.plumber())
       // .pipe(g.jade())
-      .pipe(g.if(settings.linting, lint_html()))
-      .pipe(g.if(settings.minifying, minify_html()))
+      .pipe(g.if(settings.linting, lintHtml()))
+      .pipe(g.if(settings.minifying, minifyHtml()))
       .pipe(g.flatten())
       // .pipe(g.angularTemplatecache({ module: 'appModule' }))
       .pipe(base.placeFiles(settings.templates.dest, 'Templates compiled.'));

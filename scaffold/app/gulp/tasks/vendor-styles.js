@@ -10,10 +10,10 @@ gulp.task(
   'vendor-styles',
   'Assembles 3rd-party styles.',
   function () {
-    gulp.src(settings.vendor_styles.src)
+    gulp.src(settings.vendorStyles.src)
       .pipe(g.concat('vendor.css'))
       .pipe(g.if(settings.minifying, helper.minify()))
-      .pipe(base.placeFiles(settings.vendor_styles.dest, 'Vendor styles assembled.'));
+      .pipe(base.placeFiles(settings.vendorStyles.dest, 'Vendor styles assembled.'));
   },
   { aliases: ['vcss'] }
 );

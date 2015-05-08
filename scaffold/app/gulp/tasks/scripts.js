@@ -23,11 +23,13 @@ gulp.task(
       .pipe(g.if(settings.linting, helper.lint()))
       .pipe(g.header(';(function (document, window, undefined) { "use strict";'))
       .pipe(g.footer('})(document, window);'))
+
       // Not sure if stripping debug statements from vendor code is always
       // safe so that's why this is here and not with the minifying code
       // common to both custom code and vendor code.
-      .pipe(g.if(settings.minifying, g.stripDebug())),
-      .pipe(g.if(settings.minifying, helper.minify())),
+      .pipe(g.if(settings.minifying, g.stripDebug()))
+
+      .pipe(g.if(settings.minifying, helper.minify()))
       .pipe(base.placeFiles(settings.scripts.dest, 'Scripts compiled.'));
   },
   { aliases: ['js'] }

@@ -10,7 +10,7 @@ gulp.task(
     browserSync.init(null, {
       browser: 'google chrome',
       minify:  false,
-      proxy:   settings.project_url
+      proxy:   settings.projectUrl
       // host:    '10.0.0.1'
     });
   },

@@ -8,7 +8,7 @@ gulp.task(
   'Copies and potentially compresses images before placing them for usage.',
   function () {
     return gulp.src(settings.images.src)
-      .pipe(g.newer(settings.images.dest || settings.default_dest_path))
+      .pipe(g.newer(settings.images.dest || settings.defaultDestPath))
       .pipe(g.if(settings.compressing, g.imagemin({ optimizationLevel: 7 })))
       .pipe(base.placeFiles(settings.images.dest, 'Images placed.'));
   },
