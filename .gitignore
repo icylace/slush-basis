@@ -21,13 +21,9 @@ Thumbs.db
 
 # Bower packages folders.
 bower_components
-vendor-bower
 
-# Brunch folder for temporary files.
-tmp
-
-# Brunch output folder.
-public
+# Output folder.
+build
 
 
 # ------------------------------------------------------------------------------
