@@ -1,6 +1,6 @@
 var g        = require('gulp-load-plugins')();
 var gulp     = require('gulp');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 gulp.task(
   'watch',

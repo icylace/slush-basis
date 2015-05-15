@@ -4,7 +4,7 @@ var gulp       = require('gulp');
 var lazy       = require('lazypipe');
 var base       = require('../helpers/base.js');
 var helper     = require('../helpers/scripts-helper.js');
-var settings   = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 // NOTE
 // - Used partly because of current limitation with `gulp-jshint`
@@ -26,7 +26,7 @@ gulp.task(
       .pipe(g.plumber())
       .pipe(g.concat('vendor.js'))
       .pipe(g.if(settings.minifying, helper.minify()))
-      .pipe(base.placeFiles((settings.vendorScripts ? settings.vendorScripts.dest : null), 'Vendor scripts assembled.'));
+      .pipe(base.place((settings.vendorScripts ? settings.vendorScripts.dest : null), 'Vendor scripts assembled.'));
   },
   { aliases: ['vjs'] }
 );

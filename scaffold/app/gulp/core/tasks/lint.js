@@ -1,5 +1,5 @@
 var gulp     = require('gulp');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 gulp.task(
   'lint',

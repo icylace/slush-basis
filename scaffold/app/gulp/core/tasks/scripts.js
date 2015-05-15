@@ -3,7 +3,7 @@ var gulp     = require('gulp');
 var lazy     = require('lazypipe');
 var base     = require('../helpers/base.js');
 var helper   = require('../helpers/scripts-helper.js');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 gulp.task(
   'scripts',
@@ -30,7 +30,7 @@ gulp.task(
       .pipe(g.if(settings.minifying, g.stripDebug()))
 
       .pipe(g.if(settings.minifying, helper.minify()))
-      .pipe(base.placeFiles(settings.scripts.dest, 'Scripts compiled.'));
+      .pipe(base.place(settings.scripts.dest, 'Scripts compiled.'));
   },
   { aliases: ['js'] }
 );

@@ -4,7 +4,7 @@ var lazy     = require('lazypipe');
 var nib      = require('nib');
 var base     = require('../helpers/base.js');
 var helper   = require('../helpers/styles-helper.js');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 gulp.task(
   'vendor-styles',
@@ -13,7 +13,7 @@ gulp.task(
     gulp.src(settings.vendorStyles.src)
       .pipe(g.concat('vendor.css'))
       .pipe(g.if(settings.minifying, helper.minify()))
-      .pipe(base.placeFiles(settings.vendorStyles.dest, 'Vendor styles assembled.'));
+      .pipe(base.place(settings.vendorStyles.dest, 'Vendor styles assembled.'));
   },
   { aliases: ['vcss'] }
 );

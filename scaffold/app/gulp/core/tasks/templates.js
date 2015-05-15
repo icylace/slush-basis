@@ -2,7 +2,7 @@ var g        = require('gulp-load-plugins')();
 var gulp     = require('gulp');
 var lazy     = require('lazypipe');
 var base     = require('../helpers/base.js');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 var minify_html = lazy()
   .pipe(g.htmlmin, {
@@ -34,7 +34,7 @@ gulp.task(
       .pipe(g.if(settings.minifying, minifyHtml()))
       .pipe(g.flatten())
       // .pipe(g.angularTemplatecache({ module: 'appModule' }))
-      .pipe(base.placeFiles(settings.templates.dest, 'Templates compiled.'));
+      .pipe(base.place(settings.templates.dest, 'Templates compiled.'));
   },
   { aliases: ['t'] }
 );

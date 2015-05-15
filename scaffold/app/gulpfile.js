@@ -8,4 +8,4 @@ g.adhoc(gulp, g.util.env);
 g.help(gulp, { aliases: ['h'] });
 
 // Load up our custom tasks.
-require('require-dir')('./gulp/tasks', { recurse: true });
+require('require-dir')('./gulp/core/tasks', { recurse: true });

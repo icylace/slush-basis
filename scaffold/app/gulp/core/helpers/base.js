@@ -1,9 +1,9 @@
 var browserSync = require('browser-sync');
 var g           = require('gulp-load-plugins')();
 var gulp        = require('gulp');
-var settings    = require('../gulp.json');
+var settings    = require('../../gulp.json');
 
-var placeFiles = function (dest, message) {
+var place = function (dest, message) {
   message = message || 'Done';
   // TODO:
   // - use multipipe or something else
@@ -17,12 +17,12 @@ var placeFiles = function (dest, message) {
 }
 
 module.exports = {
+  place: place,
   settings: {
     compressing: settings.compressing,
     linting:     settings.linting,
     minifying:   settings.minifying,
     notifying:   settings.notifying,
     syncing:     settings.syncing
-  },
-  placeFiles:  placeFiles
+  }
 };

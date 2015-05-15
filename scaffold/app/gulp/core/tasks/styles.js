@@ -3,7 +3,7 @@ var gulp     = require('gulp');
 var nib      = require('nib');
 var base     = require('../helpers/base.js');
 var helper   = require('../helpers/styles-helper.js');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 // gulp.task(
 //   'bless',
@@ -27,7 +27,7 @@ gulp.task(
       .pipe(please({ minifier: settings.minifying }))
       .pipe(g.if(settings.linting, helper.lint()))
       // .pipe(g.if(settings.minifying, helper.minify()))
-      .pipe(base.placeFiles(settings.styles.dest, 'Styles compiled.'));
+      .pipe(base.place(settings.styles.dest, 'Styles compiled.'));
   },
   { aliases: ['css'] }
 );

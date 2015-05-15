@@ -23,26 +23,26 @@
   //
 
   "fonts": {
-    "src":  "assets/fonts/*",
+    "src":  "fonts/*",
     "dest": "build/fonts"
   },
 
   "images": {
-    "src":  "assets/images/*",
+    "src":  "images/*",
     "dest": "build/images"
   },
 
   "scripts": {
     "src": [
-      "src/site/scripts/**/*.ls"
+      "src/site/_scripts/**/*"
     ]
   },
 
   "styles": {
-    "src": "src/site/styles/main.styl",
+    "src": "src/site/_styles/main.styl",
     "watch": [
-      "src/site/components/**/*.styl",
-      "src/site/styles/*.styl"
+      "src/site/_components/**/*.styl",
+      "src/site/_styles/*.styl"
     ]
   },
 
@@ -54,8 +54,8 @@
 
   "templates": {
     "src": [
-      "src/site/components/general/**/*.jade",
-      "src/site/components/admin/**/*.jade"
+      "src/site/_components/general/**/*.jade",
+      "src/site/_components/admin/**/*.jade"
     ],
     "dest": "build/templates"
   }

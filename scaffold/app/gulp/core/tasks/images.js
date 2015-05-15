@@ -1,7 +1,7 @@
 var g        = require('gulp-load-plugins')();
 var gulp     = require('gulp');
 var base     = require('../helpers/base.js');
-var settings = require('../gulp.json');
+var settings = require('../../gulp.json');
 
 gulp.task(
   'images',
@@ -10,7 +10,7 @@ gulp.task(
     return gulp.src(settings.images.src)
       .pipe(g.newer(settings.images.dest || settings.defaultDestPath))
       .pipe(g.if(settings.compressing, g.imagemin({ optimizationLevel: 7 })))
-      .pipe(base.placeFiles(settings.images.dest, 'Images placed.'));
+      .pipe(base.place(settings.images.dest, 'Images placed.'));
   },
   { aliases: ['i'] }
 );
