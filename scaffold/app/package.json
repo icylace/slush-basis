@@ -47,20 +47,17 @@
 
   "//": "Put the following into 'devDependencies' if they are useful for your particular project.",
   "_plugins": {
-    "gulp-angular-templatecache": "^1.6.0",
-    "gulp-bless":                 "git+https://github.com/adam-lynch/gulp-bless.git",
-    "gulp-cache":                 "^0.2.9",
-    "gulp-cached":                "^1.0.4",
-    "gulp-jade":                  "^1.0.0",
-    "gulp-lintspaces":            "^0.2.3",
-    "gulp-livescript":            "^2.3.0",
-    "gulp-ng-annotate":           "^0.5.3",
-    "gulp-order":                 "^1.1.1",
-    "gulp-preprocess":            "^1.2.0",
-    "gulp-remember":              "^0.3.0",
-    "gulp-rev-append":            "^0.1.6",
-    "gulp-template":              "^3.0.0",
-    "jade":                       "^1.9.2"
+    "gulp-bless":      "git+https://github.com/adam-lynch/gulp-bless.git",
+    "gulp-cache":      "^0.2.9",
+    "gulp-cached":     "^1.0.4",
+    "gulp-jade":       "^1.0.0",
+    "gulp-lintspaces": "^0.2.3",
+    "gulp-order":      "^1.1.1",
+    "gulp-preprocess": "^1.2.0",
+    "gulp-remember":   "^0.3.0",
+    "gulp-rev-append": "^0.1.6",
+    "gulp-template":   "^3.0.0",
+    "jade":            "^1.9.2"
   },
 
   "scripts": {
