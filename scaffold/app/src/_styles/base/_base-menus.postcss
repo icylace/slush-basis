@@ -1,0 +1,62 @@
+%basis_menu {
+  margin:  0;
+  padding: 0;
+  li {
+    list-style: none none;
+    margin:     0;
+    padding:    0;
+  }
+  a {
+    &, &:link, &:visited, &:hover, &:active, &:focus {
+      display:         block;
+      text-decoration: none;
+    }
+  }
+  .basis-menu-parent:hover {
+    .basis-menu__submenu {
+      visibility: visible;
+    }
+  }
+  .basis-menu__submenu {
+    padding:    0;
+    visibility: hidden;
+    z-index:    1;
+    li {
+      display: block;
+    }
+  }
+}
+
+%basis_menu__horizontal-floated {
+  @extends %basis_menu;
+  li {
+    float:    left;
+    position: relative;
+  }
+  .basis-menu__submenu {
+    position: absolute;
+  }
+}
+
+%basis_menu__horizontal-justified {
+  @extends %basis_menu;
+  position:   relative;
+  text-align: justify;
+  &:after {
+    content: '';
+    display: inline-block;
+    width:   100%;
+  }
+  li {
+    display:    inline-block;
+    text-align: left;
+  }
+  .basis-menu__submenu {
+    position: absolute;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+// http://jsfiddle.net/csswizardry/zfSt4/
+// table-layout

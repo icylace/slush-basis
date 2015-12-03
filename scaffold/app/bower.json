@@ -7,43 +7,31 @@
   "authors": [
     "your name <you@email>"
   ],
-  "//": "Put the following into 'devDependencies' if they are useful for your particular project.",
   "_dependencies": {
-    "jquery": "2.1.x",
-    "lodash": "2.4.x",
-    "typify": "0.2.x"
   },
   "//": "Put the following into 'devDependencies' if they are useful for your particular project.",
   "_devDependencies": {
-    "angular":                     "1.2.x",
-    "angular-animate":             "1.2.x",
-    "angular-bootstrap":           "^0.11.x",
-    "angular-classy":              "^0.4.2",
-    "angular-delay":               "~0.1.2",
-    "angular-route":               "1.2.x",
-    "isteven-angular-multiselect": "~1.2.0",
-    "gibberish-aes":               "*",
-    "javascript-state-machine":    "~2.3.0",
-    "json3":                       "^3.3.2",
-    "mithril":                     "0.1.x",
-    "mithril-bootstrap":           "ng-vu/mithril-bootstrap",
-    "mithril-components":          "eddyystop/mithril-components",
-    "momentjs":                    "^2.7.x",
-    "ng-grid":                     "2.0.x",
-    "node-uuid":                   "^1.4.x",
-    "numeral":                     "^1.5.x",
-    "restangular":                 "^1.3.1",
-    "string":                      "1.9.x"
+    "gibberish-aes":            "*",
+    "javascript-state-machine": "~2.3.0",
+    "jquery":                   "2.1.x",
+    "json3":                    "^3.3.2",
+    "lodash":                   "2.4.x",
+    "mithril":                  "0.1.x",
+    "mithril-bootstrap":        "ng-vu/mithril-bootstrap",
+    "mithril-components":       "eddyystop/mithril-components",
+    "momentjs":                 "^2.7.x",
+    "node-uuid":                "^1.4.x",
+    "numeral":                  "^1.5.x",
+    "string":                   "1.9.x",
+    "typify":                   "0.2.x"
   },
   "overrides": {
-    "angular-classy":     { "main": "angular-classy.js" },
     "gibberish-aes":      { "main": "dist/gibberish-aes-1.0.0.js" },
     "json3":              { "main": "lib/json3.js" },
     "lodash":             { "main": "dist/lodash.js" },
     "mithril":            { "main": "mithril.js" },
     "mithril-bootstrap":  { "main": "dist/mithril-bootstrap.js" },
     "mithril-components": { "main": "components/tabs/tabs.js" },
-    "ng-grid":            { "main": "build/ng-grid.js" },
     "node-uuid":          { "main": "uuid.js" }
   }
 }

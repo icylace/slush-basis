@@ -20,20 +20,3 @@ html.no-js(lang="en")<!--<![endif]-->
           .sidebar-second
     script(src="vendor.js")
     script(src="main.js")
-
-    //- Auto-refresh when files change.
-    //- https://github.com/icylace/Reloadr
-    script(src="path/to/reloadr.js")
-    script.
-      if (typeof Reloadr === 'object') {
-        Reloadr.go({
-          path: 'path/to/reloadr.php',
-          client: [
-            'path/to/main.css',
-            'path/to/main.js'
-          ],
-          server: [
-            'file/path/to/*.php'
-          ]
-        });
-      }
