@@ -1,6 +1,6 @@
 {
   "name":        "your-app",
-  "version":     "0.0.1",
+  "version":     "0.0.0",
   "homepage":    "http://site.dev/",
   "license":     "proprietary",
   "private":     true,
