@@ -15,5 +15,5 @@ var minifyScripts = lazy()
 
 module.exports = {
   lint:   lintScripts,
-  minify: minifyScripts,
+  minify: minifyScripts
 };

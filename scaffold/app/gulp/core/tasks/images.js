@@ -5,7 +5,7 @@ var settings = require('../../gulp.json');
 
 gulp.task(
   'images',
-  'Copies and potentially compresses images before placing them for usage.',
+  'Copies and optionally compresses images before placing them for usage.',
   function () {
     return gulp.src(settings.images.src)
       .pipe(g.newer(settings.images.dest || settings.defaultDestPath))

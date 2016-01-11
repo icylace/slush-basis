@@ -24,9 +24,8 @@ gulp.task(
       .pipe(g.stylus({ use: [nib()] }))
       // .pipe(g.cached('styles'))
       // .pipe(g.remember('styles'))
-      .pipe(please({ minifier: settings.minifying }))
       .pipe(g.if(settings.linting, helper.lint()))
-      // .pipe(g.if(settings.minifying, helper.minify()))
+      .pipe(g.if(settings.minifying, helper.minify()))
       .pipe(base.place(settings.styles.dest, 'Styles compiled.'));
   },
   { aliases: ['css'] }

@@ -6,21 +6,23 @@
   "notifying":   false,
   "syncing":     false,
 
-  // URL used for browser syncing.
+  "// defaultTask": "styles",
+
+  "//": "URL used for browser syncing.",
   "projectUrl": "",
 
-  // Where output files will generally be placed.
+  "//": "Where output files will generally be placed.",
   "defaultDest": "build",
 
-  // Paths to delete when the 'clean' task is run.
+  "//": "Paths to delete when the 'clean' task is run.",
   "cleanablePaths": ["build", "build/*", "tmp"],
 
-  // The temporary folder.  Ideally not the same as the output folder or a subfolder of it.
+  "//": "The temporary folder.  Ideally not the same as the output folder or a subfolder of it.",
   "tmp": "tmp",
 
-  //
-  // 'Watch' paths will override source paths when the 'watch' task is used.
-  //
+  "//": "",
+  "//": "'Watch' paths will override source paths when the 'watch' task is used.",
+  "//": "",
 
   "fonts": {
     "src":  "fonts/*",
@@ -34,15 +36,15 @@
 
   "scripts": {
     "src": [
-      "src/site/_scripts/**/*"
+      "src/_scripts/**/*"
     ]
   },
 
   "styles": {
-    "src": "src/site/_styles/main.styl",
+    "src": "src/_styles/main.styl",
     "watch": [
-      "src/site/_components/**/*.styl",
-      "src/site/_styles/*.styl"
+      "src/_components/**/*.styl",
+      "src/_styles/*.styl"
     ]
   },
 
@@ -54,8 +56,8 @@
 
   "templates": {
     "src": [
-      "src/site/_components/general/**/*.jade",
-      "src/site/_components/admin/**/*.jade"
+      "src/_components/general/**/*.jade",
+      "src/_components/admin/**/*.jade"
     ],
     "dest": "build/templates"
   }

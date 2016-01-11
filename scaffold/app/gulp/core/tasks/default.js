@@ -1,10 +1,11 @@
-var gulp = require('gulp');
-var run  = require('run-sequence');
+var gulp     = require('gulp');
+var run      = require('run-sequence');
+var settings = require('../../gulp.json');
 
 gulp.task(
   'default',
-  'Builds the project and initiates watching with browser sync.',
+  'Shows the help screen or runs the given default task in gulp.json if it is defined.',
   function () {
-    return run('build', 'init-sync', 'watch');
+    return settings.defaultTask ? run(settings.defaultTask) : run('help');
   }
 );

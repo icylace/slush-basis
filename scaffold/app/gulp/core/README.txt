@@ -4,7 +4,7 @@ Heavily influenced by:
 - http://viget.com/extend/gulp-browserify-starter-faq
 
 
-The Gulp file references tasks that are stored in the "gulp/tasks" folder.
+The Gulp file references tasks that are stored in the "gulp/core/tasks" folder.  Create additional custom tasks in the "gulp/custom/tasks" folder.
 
 The following plugins are used:
 
@@ -15,7 +15,6 @@ gulp-adhoc        - Easy sequential & parallel task composition
                     on the command-line.
 gulp-concat       - Concatenates files.
 gulp-csslint      - Lints CSS.
-gulp-csso         - Minifies CSS.
 gulp-flatten      - Removes or changes relative paths for files.
 gulp-footer       - Adds a footer to the file(s) in the stream.
 gulp-gzip         - Compresses files.
@@ -30,10 +29,10 @@ gulp-load-plugins - Automatically load Gulp plugins.
 gulp-load-utils   - A collection of utilities.
 gulp-newer        - Only passes through newer files.
 gulp-notify       - Sends notification messages.
+gulp-pleeease     - Post-processes CSS.
 gulp-plumber      - Attempts to prevent streams from crashing.
 gulp-rename       - Renames files and folders.
 gulp-size         - Displays file sizes.
-gulp-stylus       - Transpiles Stylus into CSS.
 gulp-template     - Renders Lo-Dash templates.
 gulp-uglify       - Minifies JavaScript.
 gulp-w3cjs        - Validates HTML.
@@ -41,8 +40,9 @@ gulp-watch        - A better alternative to `gulp.watch()`.
 jshint-stylish-ex - Stylish reporter for JSHint with styling options.
 lazypipe          - Creates reusable partial pipelines.
 main-bower-files  - Builds an array of your bower packages' main files.
+multipipe         - Creates duplex streams and handles errors in one place.
+                    Required by pipeline from gulp-load-utils.
 nib               - A Stylus library.
-pipe-joint        - Allows for minimal pipe notation.
 run-sequence      - Runs a series of potentially non-dependent tasks in order.
 
 
@@ -57,15 +57,20 @@ jade              - A language which transpiles to HTML.
 LiveScript        - A language which transpiles to JavaScript.
 minimist          - Parses argument options.  Required by env
                     from gulp-load-utils.
-multipipe         - Creates duplex streams and handles errors in one place.
-                    Required by pipeline from gulp-load-utils.
-stylus            - A language which transpiles to CSS.
 
 
 
 
 
 TODO
+- make "compressing" flag activate "minifying" flag
+- shift Stylus compilation to Pleeease
+  - gulp-stylus       - Transpiles Stylus into CSS.
+- compare gulp-csso and gulp-pleeease
+  - gulp-csso         - Minifies CSS.
+- compare pipe-joint, multipipe, and lazypipe
+  - does multipipe still have a files problem ?
+  - pipe-joint        - Allows for minimal pipe notation.
 - tmp folder workflow with caching
 - get bless working
 - consider using these modules:
@@ -73,10 +78,8 @@ TODO
   gulp-cache       - Uses temporary files for caching.
   gulp-cached      - An in-memory file cache.
   gulp-lintspaces  - Checks spaces in files.
-  gulp-pleeease    - Post-processes CSS.
   gulp-preprocess  - Preprocesses files based on context or environment.
   gulp-remember    - Adds previously seen files back into the stream.
   gulp-strip-debug - Removes debugging statements.
-
   gulp-todo        - "Generate a TODO.md file from comments of files in stream"
   https://github.com/pgilad/gulp-todo

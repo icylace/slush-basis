@@ -7,5 +7,6 @@ g.adhoc(gulp, g.util.env);
 // Enable the help text task.
 g.help(gulp, { aliases: ['h'] });
 
-// Load up our custom tasks.
+// Load up our tasks.
 require('require-dir')('./gulp/core/tasks', { recurse: true });
+require('require-dir')('./gulp/custom/tasks', { recurse: true });

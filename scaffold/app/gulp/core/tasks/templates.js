@@ -4,7 +4,7 @@ var lazy     = require('lazypipe');
 var base     = require('../helpers/base.js');
 var settings = require('../../gulp.json');
 
-var minify_html = lazy()
+var minifyHtml = lazy()
   .pipe(g.htmlmin, {
     collapseBooleanAttributes:    true,
     collapseWhitespace:           true,
